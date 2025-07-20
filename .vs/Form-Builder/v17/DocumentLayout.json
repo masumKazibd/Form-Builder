@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\GSA Practice\\Form-Builder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\form-builder.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\form-builder.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\models\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\models\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|d:\\projects\\gsa practice\\form-builder\\form-builder\\models\\formfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0FDEF8-08EB-41BF-BCC0-F5133ABF17B6}|Form-Builder\\Form-Builder.csproj|solutionrelative:form-builder\\models\\formfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form-Builder",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Form-Builder.csproj",
+              "RelativeDocumentMoniker": "Form-Builder\\Form-Builder.csproj",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Form-Builder.csproj",
+              "RelativeToolTip": "Form-Builder\\Form-Builder.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-20T14:51:49.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Form-Builder\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Form-Builder\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:47:56.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Program.cs",
+              "RelativeDocumentMoniker": "Form-Builder\\Program.cs",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Program.cs",
+              "RelativeToolTip": "Form-Builder\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:46:32.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\appsettings.json",
+              "RelativeDocumentMoniker": "Form-Builder\\appsettings.json",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\appsettings.json",
+              "RelativeToolTip": "Form-Builder\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-20T14:45:53.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormFields.cs",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Models\\FormFields.cs",
+              "RelativeDocumentMoniker": "Form-Builder\\Models\\FormFields.cs",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Models\\FormFields.cs",
+              "RelativeToolTip": "Form-Builder\\Models\\FormFields.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:41:32.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form.cs",
+              "DocumentMoniker": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Models\\Form.cs",
+              "RelativeDocumentMoniker": "Form-Builder\\Models\\Form.cs",
+              "ToolTip": "D:\\Projects\\GSA Practice\\Form-Builder\\Form-Builder\\Models\\Form.cs",
+              "RelativeToolTip": "Form-Builder\\Models\\Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:40:52.083Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
