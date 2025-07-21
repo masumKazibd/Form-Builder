@@ -37,5 +37,21 @@ namespace Form_Builder.Controllers
                 return View();
             }
         }
+        public IActionResult Preview(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound();
+            }
+
+            var formViewModel = _formRepository.GetFormById(id);
+
+            if (formViewModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(formViewModel);
+        }
     }
 }

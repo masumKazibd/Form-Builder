@@ -1,4 +1,5 @@
 ﻿using Form_Builder.Models;
+using Form_Builder.Models.ViewModels;
 using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
 
@@ -60,6 +61,38 @@ namespace Form_Builder.Data
                 }
             }
             return forms;
+        }
+        public PreviewViewModel GetFormById(int formId)
+        {
+            var viewModel = new PreviewViewModel();
+            viewModel.Fields = new List<FormFieldViewModel>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string formSql = "SELECT Title FROM Forms WHERE FormID = @FormID";
+                SqlCommand formCommand = new SqlCommand(formSql, connection);
+                formCommand.Parameters.AddWithValue("@FormID", formId);
+                viewModel.FormTitle = (string)formCommand.ExecuteScalar();
+
+                string fieldsSql = "SELECT Label, IsRequired FROM FormFields WHERE FormID = @FormID";
+                SqlCommand fieldsCommand = new SqlCommand(fieldsSql, connection);
+                fieldsCommand.Parameters.AddWithValue("@FormID", formId);
+
+                using (SqlDataReader reader = fieldsCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        viewModel.Fields.Add(new FormFieldViewModel
+                        {
+                            Label = reader["Label"].ToString(),
+                            IsRequired = Convert.ToBoolean(reader["IsRequired"])
+                        });
+                    }
+                }
+            }
+            return viewModel;
         }
     }
 }

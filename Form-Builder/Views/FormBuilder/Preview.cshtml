@@ -1,0 +1,37 @@
+﻿@model Form_Builder.Models.ViewModels.PreviewViewModel
+
+@{
+    ViewData["Title"] = "Form Preview";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.FormTitle</h3>
+    </div>
+    <div class="card-body">
+        <form>
+            @foreach (var field in Model.Fields)
+            {
+                <div class="form-group">
+                    <label>
+                        @field.Label
+                        @if (field.IsRequired)
+                        {
+                            <span class="text-danger">*</span>
+                        }
+                    </label>
+                    <select class="form-control">
+                        <option>Select Item</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
