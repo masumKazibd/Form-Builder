@@ -1,0 +1,14 @@
+--Forms
+CREATE TABLE Forms (
+    FormID INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(255) NOT NULL
+);
+
+--FormFields 
+CREATE TABLE FormFields (
+    FieldID INT PRIMARY KEY IDENTITY(1,1),
+    Label NVARCHAR(255) NOT NULL,
+    IsRequired BIT NOT NULL,
+    FormID INT,
+    CONSTRAINT FK_FormFields_Forms FOREIGN KEY (FormID) REFERENCES Forms(FormID)
+);
