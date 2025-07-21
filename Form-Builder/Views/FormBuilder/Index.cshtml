@@ -1,0 +1,31 @@
+﻿@model List<Form_Builder.Models.Form>
+
+@{
+    ViewData["Title"] = "Saved Forms";
+}
+
+<h2>History</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Form Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var form in Model)
+        {
+            <tr>
+                <td>@form.FormTitle</td>
+                <td>
+                    <a asp-action="Preview" asp-route-id="@form.FormID" class="btn btn-info btn-sm">Preview</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Form</a>
+</p>

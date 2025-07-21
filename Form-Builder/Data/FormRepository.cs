@@ -38,5 +38,28 @@ namespace Form_Builder.Data
                 }
             }
         }
+
+        public List<Form> GetAllForms()
+        {
+            var forms = new List<Form>();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT FormID, Title FROM Forms ORDER BY FormID DESC";
+                SqlCommand command = new SqlCommand(sql, connection);
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        forms.Add(new Form
+                        {
+                            FormID = Convert.ToInt32(reader["FormID"]),
+                            FormTitle = reader["Title"].ToString()
+                        });
+                    }
+                }
+            }
+            return forms;
+        }
     }
 }

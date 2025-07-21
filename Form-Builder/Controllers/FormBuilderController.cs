@@ -13,6 +13,13 @@ namespace Form_Builder.Controllers
             _configuration = configuration;
             _formRepository = new FormRepository(configuration);
         }
+
+        public IActionResult Index()
+        {
+            var allForms = _formRepository.GetAllForms();
+            return View(allForms);
+
+        }
         public IActionResult Create()
         {
             return View();
