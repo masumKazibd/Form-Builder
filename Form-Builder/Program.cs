@@ -25,5 +25,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=FormBuilder}/{action=Index}/{id?}");
+app.MapControllers();
 
 app.Run();
