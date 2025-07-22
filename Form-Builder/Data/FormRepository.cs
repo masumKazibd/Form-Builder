@@ -40,6 +40,35 @@ namespace Form_Builder.Data
             }
         }
 
+        public void DeleteFormById(int formId)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    string deleteFieldsSql = "DELETE FROM FormFields WHERE FormID = @FormID";
+                    SqlCommand deleteFieldsCommand = new SqlCommand(deleteFieldsSql, connection, transaction);
+                    deleteFieldsCommand.Parameters.AddWithValue("@FormID", formId);
+                    deleteFieldsCommand.ExecuteNonQuery();
+
+                    string deleteFormSql = "DELETE FROM Forms WHERE FormID = @FormID";
+                    SqlCommand deleteFormCommand = new SqlCommand(deleteFormSql, connection, transaction);
+                    deleteFormCommand.Parameters.AddWithValue("@FormID", formId);
+                    deleteFormCommand.ExecuteNonQuery();
+
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+
+                }
+            }
+        }
         public List<Form> GetAllForms()
         {
             var forms = new List<Form>();

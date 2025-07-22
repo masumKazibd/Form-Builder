@@ -42,5 +42,19 @@ namespace Form_Builder.Controllers.Api
                 return StatusCode(500, "An internal server error occurred.");
             }
         }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _formRepository.DeleteFormById(id);
+                return Ok(new { success = true, message = "Form deleted successfully." });
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex)
+                return StatusCode(500, "An error occurred while deleting the form.");
+            }
+        }
     }
 }
