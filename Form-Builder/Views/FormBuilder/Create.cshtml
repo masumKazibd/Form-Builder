@@ -25,27 +25,18 @@
         $(document).ready(function () {
 
             let fieldIndex = 0;
-
             $('#add-more-btn').on('click', function () {
-                var newFieldHtml = `
-                    <div class="form-row mb-3" id="field-row-${fieldIndex}">
-                        <div class="col-md-8">
-                            <input type="text" name="Fields[${fieldIndex}].Label" class="form-control" placeholder="Enter Field Label" required />
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input type="checkbox" name="Fields[${fieldIndex}].IsRequired" value="true" class="form-check-input" />
-                                <label class="form-check-label">Is Required</label>
-                            </div>
-                        </div>
-                        <div class="col-md-1">
-                            <button type="button" class="btn btn-danger btn-sm remove-btn" data-row-id="field-row-${fieldIndex}">X</button>
-                        </div>
-                    </div>`;
-
-                $('#dynamic-fields-container').append(newFieldHtml);
-
-                fieldIndex++;
+                $.ajax({
+                    url: `/FormBuilder/RenderField?fieldIndex=${fieldIndex}`,
+                    type: 'GET',
+                    success: function (fieldHtml) {
+                        $('#dynamic-fields-container').append(fieldHtml);
+                        fieldIndex++;
+                    },
+                    error: function() {
+                        alert('Error loading new field.');
+                    }
+                });
             });
 
             $(document).on('click', '.remove-btn', function () {
@@ -54,29 +45,27 @@
             });
 
             $('#createForm').on('submit', function (e) {
-                e.preventDefault(); // ডিফল্ট পেজ রিলোড বন্ধ করুন
+                e.preventDefault();
 
                 var formData = {
                     formTitle: $('#formTitle').val(),
                     fields: []
                 };
 
-                // ডাইনামিক ফিল্ডগুলো থেকে ডেটা সংগ্রহ করুন
                 $('#dynamic-fields-container .form-row').each(function(index, row) {
                     var label = $(row).find('input[type="text"]').val();
                     var isRequired = $(row).find('input[type="checkbox"]').is(':checked');
                     formData.fields.push({ label: label, isRequired: isRequired });
                 });
 
-                // AJAX POST রিকোয়েস্ট পাঠান
-                $.ajax({
+=                $.ajax({
                     url: '/api/FormsApi',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        alert(response.message); // সফল বার্তা দেখান
-                        window.location.href = '/FormBuilder/Index'; // তালিকা পেজে পাঠান
+                        alert(response.message);
+                        window.location.href = '/FormBuilder/Index';
                     },
                     error: function () {
                         alert('Error: Could not save the form.');

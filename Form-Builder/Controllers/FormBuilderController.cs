@@ -53,5 +53,10 @@ namespace Form_Builder.Controllers
 
             return View(formViewModel);
         }
+        [HttpGet]
+        public IActionResult RenderField(int fieldIndex)
+        {
+            return ViewComponent("FormField", new { fieldIndex = fieldIndex });
+        }
     }
 }
