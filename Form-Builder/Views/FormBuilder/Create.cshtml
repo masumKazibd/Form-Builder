@@ -55,11 +55,11 @@
                         fieldIndex++;
                     },
                     error: function() {
-                        alert('Error loading new field.');
+                        showAlert('Error loading new field.', 'danger');
                     }
                 });
             });
-            
+
             $(document).on('click', '.remove-btn', function () {
                 var rowId = $(this).data('row-id');
                 $('#' + rowId).remove();
@@ -85,13 +85,7 @@
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        // alert(response.message);
-                        var alertHtml = `<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        ${response.message}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>`;
-                        $('#alertPlaceholder').html(alertHtml);
-                        // window.location.href = '/FormBuilder/Index';
+                        showAlert('response.message', 'success');
                         $('#formTitle').val('');
                         $('#dynamic-fields-container').empty();
                         setTimeout(function() {
@@ -99,14 +93,7 @@
                         }, 2000);
                     },
                     error: function () {
-                        var alertHtml = `<div class="alert alert-danger alert-dismissible fade show" role="alert">Error: Could not save the form.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>`;
-                        $('#alertPlaceholder').html(alertHtml);
-                        // window.location.href = '/FormBuilder/Index';
-                        setTimeout(function() {
-                            $(".alert").fadeOut('slow');
-                        }, 2000);
+                        showAlert('Error: Could not save the form.', 'danger');
                     }
                 });
             });

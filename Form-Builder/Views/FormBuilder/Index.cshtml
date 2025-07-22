@@ -12,6 +12,7 @@
         </a>
     </div>
     <div class="card-body">
+        <div id="alertPlaceholder"></div>
         <table class="table table-hover align-middle">
             <thead class="table-light">
                 <tr>
@@ -51,14 +52,11 @@
                         type: 'DELETE',
                         success: function (response) {
                             if (response.success) {
-                                alert(response.message);
-                                button.closest('tr').fadeOut('slow', function() {
-                                    $(this).remove();
-                                });
+                                showAlert(response.message, 'success');
                             }
                         },
                         error: function () {
-                            alert('Error: Could not delete the form.');
+                            showAlert('Error: Could not delete the form.', 'danger');
                         }
                     });
                 }
