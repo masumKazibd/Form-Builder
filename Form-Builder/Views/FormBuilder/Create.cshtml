@@ -3,7 +3,7 @@
 }
 
 <h2>Create a New Form</h2>
-
+<div id="alertPlaceholder"></div>
 <form id="createForm">
     <div class="form-group">
         <label for="formTitle">Form Title</label>
@@ -65,13 +65,28 @@
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        alert(response.message);
+                        // alert(response.message);
+                        var alertHtml = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        ${response.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>`;
+                        $('#alertPlaceholder').html(alertHtml);
                         // window.location.href = '/FormBuilder/Index';
                         $('#formTitle').val('');
                         $('#dynamic-fields-container').empty();
+                        setTimeout(function() {
+                            $(".alert").fadeOut('slow');
+                        }, 2000);
                     },
                     error: function () {
-                        alert('Error: Could not save the form.');
+                        var alertHtml = `<div class="alert alert-danger alert-dismissible fade show" role="alert">Error: Could not save the form.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>`;
+                        $('#alertPlaceholder').html(alertHtml);
+                        // window.location.href = '/FormBuilder/Index';
+                        setTimeout(function() {
+                            $(".alert").fadeOut('slow');
+                        }, 2000);
                     }
                 });
             });
