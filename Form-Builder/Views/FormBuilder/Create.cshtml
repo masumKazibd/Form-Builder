@@ -73,7 +73,8 @@
                     fields: []
                 };
 
-                $('#dynamic-fields-container .form-row').each(function(index, row) {
+                // $('#dynamic-fields-container .form-row').each(function(index, row) {
+                $('#dynamic-fields-container .input-group').each(function(index, row) {
                     var label = $(row).find('input[type="text"]').val();
                     var isRequired = $(row).find('input[type="checkbox"]').is(':checked');
                     formData.fields.push({ label: label, isRequired: isRequired });
@@ -85,7 +86,7 @@
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        showAlert('response.message', 'success');
+                        showAlert(response.message, 'success');
                         $('#formTitle').val('');
                         $('#dynamic-fields-container').empty();
                         setTimeout(function() {
